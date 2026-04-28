@@ -1,0 +1,14 @@
+runtime:
+  memory_limit: 8Gi
+  cpu_limit: 4
+  network_policy: restricted
+
+safety:
+  classifiers:
+    - builtin:pii
+    - builtin:injection
+    - wasm:./plugins/content-policy.wasm
+
+image:
+  registry: local
+  verify_signatures: true
